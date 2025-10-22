@@ -25,7 +25,7 @@ The service provides an API endpoint that returns the current time or a formatte
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/timestamp-microservice.git
+git clone https://github.com/tamarques13/Timestamp-Microservice.git
 
 # Enter the project directory
 cd timestamp-microservice
