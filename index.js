@@ -12,7 +12,7 @@ app.get("/", function (req, res) {
   res.sendFile(__dirname + '/views/index.html');
 });
 
-app.get("/api/:date?", function (req, res) {
+app.get("/api/:date?/date", function (req, res) {
   const { date: dateParam } = req.params;
 
   if (!dateParam) {
