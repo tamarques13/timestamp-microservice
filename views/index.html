@@ -1,32 +1,39 @@
 <!DOCTYPE html>
-
 <html>
-   <head>
-      <title>Timestamp Microservice | freeCodeCamp.org</title>
-      <link rel="shortcut icon" href="https://cdn.freecodecamp.org/universal/favicons/favicon-32x32.png" type="image/x-icon"/>
-      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
-      <link href="style.css" rel="stylesheet" type="text/css">
-   </head>
-
-   <body>
+<head>
+  <meta charset="utf-8" />
+  <title>Timestamp Microservice</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <script src="/js/script.js" defer></script>
+</head>
+<body>
+  <header>
     <h1>Timestamp Microservice</h1>
     <hr />
-    <div class="container">
-      <h2>Example Usage:</h2>
-      <ul>
-        <li><a href="api/2015-12-25">[project url]/api/2015-12-25</a></li>
-        <li><a href="api/1451001600000">[project url]/api/1451001600000</a></li>
-      </ul>
-
-      <h2>Example Output:</h2>
-      <p>
-        <code>{"unix":1451001600000, "utc":"Fri, 25 Dec 2015 00:00:00 GMT"}</code>
-      </p>
+  </header>
+  <main>
+    <div id="converter">
+      <div class="choice-picker">
+        <label>
+          <input type="radio" name="inputMode" value="clock" checked>
+          <div id="clockContainer">
+            <div id="clock">00:00:00</div>
+          </div>
+        </label>
+        <label>
+          <input type="radio" name="inputMode" value="manual">
+          <div id="manualContainer">
+            <input type="text" id="dateInput" placeholder="YYYY-MM-DD or Unix">
+          </div>
+        </label>
+      </div>
+      <div class="btn-converter">
+        <button id="fetchBtnUnix"><span>Convert to Unix</span></button>
+        <button id="fetchBtnUTC"><span>Convert to UTC</span></button>
+      </div>
+      <div id="result"><strong>[ Result ]</strong></div>
     </div>
-    <div class="footer">
-      <p>
-        By <a href="https://www.freecodecamp.org/">freeCodeCamp.org</a>
-      </p>
-    </div>
-  </body>
+  </main>
+</body>
 </html>
